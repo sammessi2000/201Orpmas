@@ -1,0 +1,408 @@
+<?php
+$hotline = $this->App->t('company_hotline');
+$hotline_number = preg_replace('/[^0-9]/', '', $hotline);
+?>
+
+<div class="destin-modal">
+    <div class="modal-shadow"></div>
+    <div class="modal-content">
+        <div class="wrap985">
+
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="modal-item-img">
+                        <img>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="modal-item-text">
+                        <p class="modal-item-title">
+                        </p>
+                        <div class="modal-item-content">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.09399 16.6738L8.59402 9.17386M8.59402 9.17386L16.094 1.67383M8.59402 9.17386L1.09399 1.67383M8.59402 9.17386L16.094 16.6738" stroke="#F12690" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+
+</div>
+<div class="destin-modal-pr">
+    <div class="modal-shadow"></div>
+    <div class="modal-content">
+        <div class="wrap985">
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="modal-item-img">
+                        <img>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="modal-item-text">
+                        <p class="modal-item-title">
+                        </p>
+                        <div class="modal-item-content">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.09399 16.6738L8.59402 9.17386M8.59402 9.17386L16.094 1.67383M8.59402 9.17386L1.09399 1.67383M8.59402 9.17386L16.094 16.6738" stroke="#F12690" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+
+</div>
+<div class="footer">
+    <?php if (is_array($categories_footer_1)) { ?>
+        <ul class="menu-footer">
+            <?php foreach ($categories_footer_1 as $v) { ?>
+                <?php if ($v['Category']['id'] == 442) {
+                    break;
+                } ?>
+                <li class="mf-item">
+                    <?php echo '<a href="' . $this->App->get_category_link($v) . '" title="footer-menu">'; ?>
+                    <?php echo $this->App->t('title', $v['Node']); ?>
+                    <?php echo '</a>'; ?>
+                    <?php echo '</li>'; ?>
+                <?php } ?>
+        </ul>
+    <?php } ?>
+
+    <?php if (is_array($categories_footer_1)) { ?>
+        <?php foreach ($categories_footer_1 as $v) { ?>
+            <?php if ($v['Category']['id'] == 442) { ?>
+                <div class="privacy-policy">
+                    <a href="<?php echo $this->App->get_category_link($v) ?>" title="privacy-policy">
+                    <?php echo $this->App->t('title', $v['Node']);
+                    break;
+                } else {
+                    continue;
+                } ?>
+                <?php } ?>
+            <?php } ?>
+                    </a>
+                </div>
+                <div class="copyright">
+                    <p><?php echo $this->App->t_a('copyright'); ?></p>
+
+                    <div class="instagram">
+                        <a href="<?php echo $settings['instagram']; ?>">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.75 2.5H20.25C24.25 2.5 27.5 5.75 27.5 9.75V20.25C27.5 22.1728 26.7362 24.0169 25.3765 25.3765C24.0169 26.7362 22.1728 27.5 20.25 27.5H9.75C5.75 27.5 2.5 24.25 2.5 20.25V9.75C2.5 7.82718 3.26384 5.98311 4.62348 4.62348C5.98311 3.26384 7.82718 2.5 9.75 2.5ZM9.5 5C8.30653 5 7.16193 5.47411 6.31802 6.31802C5.47411 7.16193 5 8.30653 5 9.5V20.5C5 22.9875 7.0125 25 9.5 25H20.5C21.6935 25 22.8381 24.5259 23.682 23.682C24.5259 22.8381 25 21.6935 25 20.5V9.5C25 7.0125 22.9875 5 20.5 5H9.5ZM21.5625 6.875C21.9769 6.875 22.3743 7.03962 22.6674 7.33265C22.9604 7.62567 23.125 8.0231 23.125 8.4375C23.125 8.8519 22.9604 9.24933 22.6674 9.54235C22.3743 9.83538 21.9769 10 21.5625 10C21.1481 10 20.7507 9.83538 20.4576 9.54235C20.1646 9.24933 20 8.8519 20 8.4375C20 8.0231 20.1646 7.62567 20.4576 7.33265C20.7507 7.03962 21.1481 6.875 21.5625 6.875ZM15 8.75C16.6576 8.75 18.2473 9.40848 19.4194 10.5806C20.5915 11.7527 21.25 13.3424 21.25 15C21.25 16.6576 20.5915 18.2473 19.4194 19.4194C18.2473 20.5915 16.6576 21.25 15 21.25C13.3424 21.25 11.7527 20.5915 10.5806 19.4194C9.40848 18.2473 8.75 16.6576 8.75 15C8.75 13.3424 9.40848 11.7527 10.5806 10.5806C11.7527 9.40848 13.3424 8.75 15 8.75ZM15 11.25C14.0054 11.25 13.0516 11.6451 12.3483 12.3483C11.6451 13.0516 11.25 14.0054 11.25 15C11.25 15.9946 11.6451 16.9484 12.3483 17.6517C13.0516 18.3549 14.0054 18.75 15 18.75C15.9946 18.75 16.9484 18.3549 17.6517 17.6517C18.3549 16.9484 18.75 15.9946 18.75 15C18.75 14.0054 18.3549 13.0516 17.6517 12.3483C16.9484 11.6451 15.9946 11.25 15 11.25Z" fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+</div>
+
+<?php /*
+<div class="footer">
+    <div class="wrap">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="logo-footer">
+                        <a href="<?php echo DOMAIN; ?>" title="" class="logo-img">
+                            <img class="lazy" src="<?php echo BLANK_IMAGE; ?>"
+                                data-src="<?php echo DOMAIN . $this->App->t('logo_header', array(), 'vi'); ?>" alt="">
+                        </a>
+                        <?php echo $this->App->adm_link('lang', 'logo_header', 'image'); ?>
+                    </div>
+                </div>
+                <div class="col-sm-6 text-right hidden-xs">
+                    <div class="follow media-item">FOLLOW US</div>
+                    <div class="media-icon-footer media-item">
+                        <a href="<?php echo $settings['facebook']; ?>" title="support">
+                            <img width="30" height="30" class="lazy" src="<?php echo BLANK_IMAGE; ?>"
+                                data-src="<?php echo DOMAIN; ?>uploads/images/img/facebook.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="media-icon-footer media-item">
+                        <a href="<?php echo $settings['twitter']; ?>" title="support">
+                            <img width="30" height="30" class="lazy" src="<?php echo BLANK_IMAGE; ?>"
+                                data-src="<?php echo DOMAIN; ?>uploads/images/img/twitter.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="media-icon-footer media-item">
+                        <a href="<?php echo $settings['youtube']; ?>" title="support">
+                            <img width="30" height="30" class="lazy" src="<?php echo BLANK_IMAGE; ?>"
+                                data-src="<?php echo DOMAIN; ?>uploads/images/img/youtube.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-8 footer-des col-xs-12">
+                    <div class="footer-info-wrap">
+                        <div class="footer-company-info">
+                            <span class="company-name-footer"><?php echo $this->App->t_a('company_name'); ?></span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="footer-company-info">
+                            <svg width="18" height="24" viewBox="0 0 18 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9 0C6.61304 0 4.3239 0.941475 2.63606 2.61729C0.948229 4.2931 0 6.56598 0 8.93594C0.139367 11.914 1.03821 14.8081 2.61243 17.3468C4.18664 19.8855 6.3846 21.9856 9 23.4501C11.6325 22.0057 13.8445 19.9105 15.4214 17.3675C16.9982 14.8245 17.8864 11.9201 18 8.93594C18 6.56598 17.0518 4.2931 15.3639 2.61729C13.6761 0.941475 11.387 0 9 0ZM9 12.6186C8.24483 12.6186 7.5067 12.3963 6.8788 11.9797C6.2509 11.5632 5.76137 10.9711 5.47238 10.2784C5.18339 9.58566 5.10782 8.82342 5.25515 8.08804C5.40247 7.35266 5.7662 6.67717 6.30018 6.14699C6.83417 5.61681 7.51443 5.25574 8.25509 5.10946C8.99575 4.96318 9.7635 5.03827 10.4612 5.32521C11.1589 5.61214 11.7552 6.09804 12.1747 6.72147C12.5943 7.34489 12.8183 8.07783 12.8183 8.82762C12.8183 9.83306 12.4159 10.7973 11.6998 11.5083C10.9838 12.2192 10.0126 12.6186 9 12.6186Z"
+                                    fill="#666666" />
+                            </svg>
+                            <div class="footer-add"><?php echo $this->App->t_a('footer_text_1','editor'); ?></div>
+                        </div>
+                        <div class="clearfix"></div>
+
+                        <div class="footer-company-info">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.17502 0.0845502L6.77664 3.93266C6.9534 4.14874 7.04982 4.41864 7.04982 4.69701C7.04982 4.97539 6.9534 5.24528 6.77664 5.46137L5.71474 6.30479C5.5141 6.45224 5.37215 6.66516 5.31389 6.90616C5.25563 7.14716 5.28481 7.40083 5.3962 7.62263C6.74906 10.5633 9.12408 12.9213 12.0858 14.2646C12.2891 14.4028 12.5295 14.4768 12.7759 14.4768C13.0223 14.4768 13.2629 14.4028 13.4661 14.2646L14.3156 13.263C14.5249 13.0916 14.7877 12.9979 15.059 12.9979C15.3302 12.9979 15.5929 13.0916 15.8022 13.263L19.5187 15.7933C19.7539 15.963 19.9169 16.2137 19.9758 16.4964C20.0347 16.7792 19.9853 17.0735 19.8372 17.322L18.6161 19.3251C18.5367 19.4601 18.4294 19.5769 18.3012 19.6677C18.1731 19.7586 18.0272 19.8215 17.8729 19.8522C15.3385 20.1998 12.7646 19.5985 10.6523 18.1654C5.81873 15.1862 2.09191 10.7274 0.0338522 5.46137C0.0338522 5.46137 -0.231582 2.45668 0.724074 1.71869L2.84772 0.453546C2.99528 0.253213 3.20634 0.107913 3.44705 0.0409947C3.68776 -0.0259238 3.94415 -0.0105768 4.17502 0.0845502Z"
+                                    fill="#666666" />
+                            </svg>
+                            <span class="phone-footer"><?php echo $this->App->t_a('company_phone'); ?></span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="footer-company-info">
+                            <svg width="18" height="15" viewBox="0 0 18 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.95 1.88655C17.8782 1.3687 17.6218 0.893572 17.2273 0.54743C16.8328 0.201287 16.3264 0.00709889 15.8 9.52686e-05H2.25006C1.71502 -0.00486401 1.19642 0.183947 0.791472 0.531181C0.386527 0.878416 0.122988 1.36026 0.0500488 1.88655L8.95003 7.59559L17.95 1.88655Z"
+                                    fill="#666666" />
+                                <path
+                                    d="M9.34996 8.83673C9.25567 8.9053 9.14198 8.94225 9.0251 8.94225C8.90823 8.94225 8.79438 8.9053 8.70009 8.83673L0 3.27661V12.1132C0.0130705 12.6971 0.255873 13.2526 0.676421 13.6609C1.09697 14.0692 1.66188 14.2977 2.25006 14.2975H15.8C16.3835 14.2975 16.943 14.0674 17.3556 13.6578C17.7682 13.2481 18 12.6926 18 12.1132V3.27661L9.34996 8.83673Z"
+                                    fill="#666666" />
+                            </svg>
+                            <span><a
+                                    href="mailto:<?php echo $this->App->t('company_email') ?>"><?php echo $this->App->t_a('company_email'); ?></a></span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="footer-company-info">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.44646 14.4497C6.80364 14.793 8.19771 14.9716 9.5982 14.9815V10.5491H4.91077C4.95515 11.864 5.13463 13.171 5.44646 14.4497Z"
+                                    fill="#666666" />
+                                <path
+                                    d="M5.75891 4.60978C7.03331 4.32134 8.33573 4.17271 9.64281 4.16654V0C7.99103 0.265949 6.56248 2.03894 5.75891 4.60978Z"
+                                    fill="#666666" />
+                                <path
+                                    d="M9.59813 19.9019V15.7797C8.29245 15.7517 6.99224 15.6034 5.71423 15.3364C6.56245 17.9073 7.99099 19.6359 9.59813 19.9019Z"
+                                    fill="#666666" />
+                                <path
+                                    d="M7.32144 0.354248C5.64878 0.817287 4.12481 1.7011 2.89695 2.92022C1.66909 4.13934 0.778861 5.65248 0.3125 7.31323C1.54423 6.0964 3.08822 5.23794 4.77677 4.83106C5.19161 3.13383 6.07251 1.5841 7.32144 0.354248Z"
+                                    fill="#666666" />
+                                <path
+                                    d="M19.6874 7.31323C19.221 5.65248 18.331 4.13934 17.1031 2.92022C15.8752 1.7011 14.3511 0.817287 12.6785 0.354248C13.8899 1.58775 14.7522 3.11666 15.1784 4.78672C16.8795 5.21933 18.4352 6.09097 19.6874 7.31323Z"
+                                    fill="#666666" />
+                                <path
+                                    d="M0.3125 12.6323C0.778861 14.2931 1.66909 15.8062 2.89695 17.0253C4.12481 18.2445 5.64878 19.1283 7.32144 19.5913C6.1134 18.3553 5.25162 16.8273 4.82146 15.1588C3.11876 14.7302 1.56215 13.858 0.3125 12.6323Z"
+                                    fill="#666666" />
+                                <path
+                                    d="M4.59818 5.71777C2.00891 6.55994 0.133911 7.93402 0.133911 9.57404H4.28579C4.24797 8.28115 4.35266 6.98803 4.59818 5.71777Z"
+                                    fill="#666666" />
+                                <path
+                                    d="M4.5982 14.0951C4.30736 12.8449 4.15773 11.5664 4.15188 10.2832H0C0.223214 11.9675 2.00892 13.3859 4.5982 14.0951Z"
+                                    fill="#666666" />
+                                <path
+                                    d="M4.91077 9.66246H9.5982V5.22998C8.19927 5.26161 6.80765 5.43991 5.44646 5.76189C5.13733 7.04109 4.95788 8.34778 4.91077 9.66246Z"
+                                    fill="#666666" />
+                                <path
+                                    d="M12.6785 19.5913C14.3511 19.1283 15.8752 18.2445 17.1031 17.0253C18.331 15.8062 19.221 14.2931 19.6874 12.6323C18.4318 13.8174 16.8969 14.6709 15.2231 15.1145C14.7703 16.7966 13.8947 18.337 12.6785 19.5913Z"
+                                    fill="#666666" />
+                                <path
+                                    d="M10.2233 15.7795V19.9017C11.8304 19.6358 13.259 17.9071 14.1072 15.4692C12.825 15.6915 11.5248 15.7954 10.2233 15.7795Z"
+                                    fill="#666666" />
+                                <path
+                                    d="M15.4018 5.71777C15.6706 6.98668 15.8201 8.27766 15.8482 9.57404H20C19.7768 7.93402 17.9911 6.55994 15.4018 5.71777Z"
+                                    fill="#666666" />
+                                <path
+                                    d="M15.4018 14.0951C17.9911 13.2973 19.8661 11.8789 19.8661 10.2832H15.7143C15.7304 11.5608 15.6258 12.837 15.4018 14.0951Z"
+                                    fill="#666666" />
+                                <path
+                                    d="M10.2233 0V4.16654C11.5303 4.17271 12.8328 4.32134 14.1072 4.60978C13.4375 2.03894 12.009 0.265949 10.2233 0Z"
+                                    fill="#666666" />
+                                <path
+                                    d="M14.6875 5.4522C13.3414 5.13036 11.9645 4.95204 10.5803 4.92029V9.35276H15.0446C15.0755 8.04331 14.9558 6.73464 14.6875 5.4522Z"
+                                    fill="#666666" />
+                                <path
+                                    d="M15.0446 10.3716H10.5803V14.8041C11.9661 14.7944 13.3456 14.6158 14.6875 14.2721C14.9593 12.9902 15.0791 11.6812 15.0446 10.3716Z"
+                                    fill="#666666" />
+                            </svg>
+
+                            <span>
+                                <?php
+                                $w = $this->App->t('company_website');
+                                $w = str_replace('http://', '', $w);
+                                $w = str_replace('https://', '', $w);
+                                $w = trim($w, '/ ');
+                            ?>
+                                <a href="//<?php echo $w; ?>"
+                                    target="_blank"><?php echo $this->App->t_a('company_website'); ?></a></span>
+                        </div>
+                    </div>
+
+                    <div class="footer-cat hidden-xs">
+                        <div class="footer-tab">
+                            <?php echo $this->App->t_a('footer_tab_1'); ?>
+                        </div>
+                        <?php if(is_array($categories_footer_1)){ ?>
+                        <?php echo '<ul>'; ?>
+                        <?php foreach($categories_footer_1 as $v){ ?>
+                        <?php echo '<li>'; ?>
+                        <?php echo '<a href="' . $v['Node']['slug'] . ".html" . '">' ; ?>
+                        <?php echo $v['Node']['title']; ?>
+                        <?php echo '</a>'; ?>
+                        <?php echo '</li>'; ?>
+                        <?php }?>
+                        <?php echo '</ul>'; ?>
+                        <?php }?>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-xs-12 footer-map">
+                    <div class="google-map">
+                        <?php if (isset($settings['google_map'])) {     ?>
+                        <?php echo $settings['google_map'] ?>
+                        <?php }     ?>
+                    </div>
+                </div>
+                <?php if($is_mobile == 1){ ?>
+                <div class="col-xs-12">
+                    <div class="media-footer-mobile">
+                        <span>FOLLOW US</span>
+                        <div class="wrap-media-icon">
+                            <div class="media-icon-footer">
+                                <a href="<?php echo $settings['facebook']; ?>" title="support">
+                                    <img class="lazy" src="<?php echo BLANK_IMAGE; ?>"
+                                        data-src="<?php echo DOMAIN; ?>uploads/images/img/facebook.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="media-icon-footer">
+                                <a href="<?php echo $settings['twitter']; ?>" title="support">
+                                    <img class="lazy" src="<?php echo BLANK_IMAGE; ?>"
+                                        data-src="<?php echo DOMAIN; ?>uploads/images/img/twitter.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="media-icon-footer">
+                                <a href="<?php echo $settings['youtube']; ?>" title="support">
+                                    <img class="lazy" src="<?php echo BLANK_IMAGE; ?>"
+                                        data-src="<?php echo DOMAIN; ?>uploads/images/img/youtube.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="copyright">
+    <div class="wrap">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="copy-right">
+                        <?php echo $this->App->t_a('copyright','editor'); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="fixed-social">
+
+    <div class="fixed-icon hidden-sm hidden-xs">
+        <a class="pulse-hover" href="mailto:<?php echo $this->App->t('company_email') ?>" title="social-link">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="20" fill="#007F86" />
+                <path class=""
+                    d="M28.9663 13.875C28.8865 13.3533 28.6226 12.8772 28.2222 12.5333C27.8219 12.1893 27.3116 12.0002 26.7838 12H13.2125C12.6849 12.001 12.175 12.1904 11.7749 12.5342C11.3747 12.878 11.1105 13.3536 11.03 13.875L20 19.6762L28.9663 13.875Z"
+                    fill="white" />
+                <path class=""
+                    d="M20.3225 20.8955C20.2259 20.9581 20.1132 20.9915 19.9981 20.9915C19.883 20.9915 19.7703 20.9581 19.6738 20.8955L11 15.2705V24.1655C11 24.7526 11.233 25.3158 11.6478 25.7313C12.0626 26.1468 12.6254 26.3807 13.2125 26.3817H26.7837C27.3709 26.3797 27.9335 26.1456 28.3487 25.7304C28.7639 25.3152 28.998 24.7527 29 24.1655V15.2705L20.3225 20.8955Z"
+                    fill="white" />
+            </svg>
+        </a>
+    </div>
+    <div class="fixed-icon ">
+        <a class="pulse-hover tran-delay-2" href="tel:<?php echo $settings['hotline']; ?>" title="icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="20" fill="#EA0000" />
+                <path class=""
+                    d="M14.9161 11.4297L17.2527 14.9347C17.3938 15.1448 17.4516 15.3998 17.4149 15.6501C17.3783 15.9005 17.2498 16.1283 17.0545 16.2891L16.1119 17.0639C15.9398 17.205 15.8188 17.3987 15.7676 17.6153C15.7163 17.8319 15.7376 18.0593 15.8282 18.2626C17.0396 20.9389 19.1893 23.0789 21.8711 24.2781C22.0753 24.3745 22.3056 24.4006 22.5262 24.3526C22.7469 24.3046 22.9455 24.1852 23.0912 24.0127L23.8447 23.125C24.0074 22.9337 24.235 22.8092 24.4838 22.7754C24.7327 22.7416 24.9852 22.8011 25.193 22.9421L28.5484 25.2116C28.7659 25.3573 28.9189 25.5812 28.9757 25.8368C29.0325 26.0924 28.9888 26.3601 28.8535 26.5842L27.734 28.4145C27.6638 28.532 27.5701 28.6338 27.4589 28.7136C27.3476 28.7934 27.2211 28.8494 27.0873 28.8782C26.1722 29.0795 23.8782 29.2625 20.6082 27.3804C16.3376 24.9156 12.1799 19.5561 11.1 15.8376C11.0827 15.7831 11.0715 15.7268 11.0665 15.6698C11.0085 15.1969 10.7889 12.9396 11.6766 12.3143L13.58 11.1338C13.7997 11.0084 14.0582 10.9694 14.3051 11.0241C14.5521 11.0788 14.7699 11.2233 14.9161 11.4297Z"
+                    fill="white" />
+            </svg>
+
+        </a>
+    </div>
+    <div class="fixed-icon">
+        <a href="javascript:;" class="back-top tran-delay-3" title="icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="20" fill="#0060A6" />
+                <path d="M28.936 23.84L19.664 15.2L10.4 23.84" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                    stroke-linecap="round" />
+            </svg>
+        </a>
+    </div>
+</div>
+
+
+<div class="support pulse hidden-sm hidden-xs">
+    <a href="<?php echo $settings['facebookchat']; ?>" title="support">
+        <img src="<?php echo DOMAIN; ?>uploads/images/img/support.svg" alt="">
+    </a>
+</div>
+<?php */ ?>
+
+
+<?php // if ($is_mobile == 1) echo View::element('menu-mobile'); 
+?>
+
+<script>
+    <?php
+    //$app_js = (isset($is_mobile) && $is_mobile == 1)  ? 'app_m.js' : 'app_pc.js';
+
+    $scripts = array(
+        'js/jquery.min.js',
+        'js/bootstrap.min.js',
+        'js/owl.carousel.min.js',
+        'js/sweetalert2.js',
+        // 'https://kientructhanhphat.com.vn/theme/default/js/mmenu.min.js',
+        'js/lazy_load.min.js',
+        'js/wow.min.js',
+        'js/bundle.js',
+        // 'js/app.js',
+        // 'js/' . $app_js,
+    );
+    // if ($is_mobile == 1) echo $this->App->build_scripts($scripts, true);
+    // else echo $this->App->build_scripts($scripts, true);
+    echo $this->App->build_scripts($scripts, true);
+    ?>
+</script>
+<script>
+    (function() {
+        var po = document.createElement('script');
+        po.type = 'text/javascript';
+        po.async = true;
+        po.src = 'https://apis.google.com/js/platform.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(po, s);
+    })();
+</script>
+
+<?php echo $settings['analytics']; ?>
+</body>
+
+</html>

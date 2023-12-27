@@ -1,0 +1,20 @@
+<div class="container">
+	<div id="breadcrumb">
+		<div itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+			<a href="<?php echo DOMAIN; ?>" itemprop="url" class="nopad-l">
+			<span itemprop="title">Trang chủ</span>
+			</a>
+		</div>
+		<div itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+			&nbsp;/&nbsp;<a href="<?php echo DOMAIN; ?>/cart/list" itemprop="url">
+			<span itemprop="title"><?php echo $this->App->t('mycart'); ?></span>
+			</a>
+		</div>
+	</div><!--breadcrumb-->
+
+    <div class="clear"></div>
+    
+    <div style="margin-bottom: 50px; font-weight: bold; text-align: center;">
+        <p><?php echo $this->App->t_a('cart-success', 'editor'); ?></p>
+    </div>
+</div>
